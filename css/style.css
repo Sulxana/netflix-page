@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #e50914;
+    --color-primary-hover: #c11119;
+    --color-dark: #000000;
+    --color-light: #ffffff;
+    --color-gray: #b3b3b3;
+    --color-gray-dark: #161616;
+    
+    --font-base: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-base);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo-link { display: inline-block; }
+.nav-logo { fill: var(--color-primary); height: 1.5rem; }
+
+.nav-btns {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.lang-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.2rem 1.5rem 0.2rem 2rem;
+}
+
+.lang-icon {
+    position: absolute;
+    left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-light);
+}
+
+.lang-select {
+    background: transparent;
+    color: var(--color-light);
+    border: none;
+    font-size: 1rem;
+    padding: 0.25rem 0;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-red {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+.btn-red:hover { background-color: var(--color-primary-hover); }
+
+.btn-sm { padding: 0.4rem 1rem; font-size: 0.875rem; border-radius: 4px; }
+.btn-lg { padding: 0.75rem 1.5rem; font-size: 1.5rem; font-weight: 500; }
+
+@media (min-width: 960px) {
+    .top-nav { padding: 1.5rem 10%; }
+    .nav-logo { height: 2.5rem; }
+    .btn-sm { padding: 0.5rem 1rem; font-size: 1rem; }
+}
