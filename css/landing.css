@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-area {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/hero-bg.jpg') center/cover no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.hero-area::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+.splash-inner {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 5% 5rem;
+}
+
+.hero-box {
+    max-width: 950px;
+    width: 100%;
+}
+
+.hero-head {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
