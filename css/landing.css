@@ -201,3 +201,44 @@
     gap: 0.5rem;
     font-weight: 500;
 }
+
+/* ==========================================================================
+   Sections Layout
+   ========================================================================== */
+.main-wrap {
+    padding: 0 5%;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Trending Carousel
+   ========================================================================== */
+.slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.movie-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    gap: 3rem;
+    padding: 1.5rem 0 2.5rem 3.5rem;
+    width: 100%;
+}
+
+.movie-list::-webkit-scrollbar {
+    display: none;
+}
