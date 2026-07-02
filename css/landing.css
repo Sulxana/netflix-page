@@ -242,3 +242,19 @@
 .movie-list::-webkit-scrollbar {
     display: none;
 }
+
+.movie-card {
+    position: relative;
+    flex: 0 0 180px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+    z-index: 5;
+}
+
+.slide-img {
+    width: 100%;
+    border-radius: 8px;
