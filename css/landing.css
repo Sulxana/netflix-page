@@ -313,3 +313,47 @@
     }
 }
 
+/* ==========================================================================
+   Reasons Grid
+   ========================================================================== */
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    list-style: none;
+}
+
+.why-card {
+    background: linear-gradient(135deg, #192144 0%, #210e17 100%);
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.perk-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.perk-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.perk-icon-box {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+.perk-icon {
+    width: 100%;
+    height: 100%;
+}
+
