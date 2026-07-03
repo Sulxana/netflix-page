@@ -258,3 +258,58 @@
 .slide-img {
     width: 100%;
     border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.rank-num {
+    position: absolute;
+    left: -2.5rem;
+    bottom: -1.5rem;
+    font-size: 9rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--color-dark);
+    -webkit-text-stroke: 4px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    width: 3.5rem;
+    height: 85%;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, opacity 0.3s;
+    border-radius: 4px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+@media (min-width: 960px) {
+    .movie-card {
+        flex: 0 0 240px;
+    }
+}
+

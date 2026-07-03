@@ -12,4 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const passwordValue = passwordInput.value.trim();
             let isValid = true;
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailValue) {
+                showError(emailInput, emailMsg, "Please enter a valid email address or phone number.");
+                isValid = false;
+            } else if (!emailRegex.test(emailValue)) {
+                showError(emailInput, emailMsg, "Please enter a valid email address.");
+                isValid = false;
+            } else {
+                clearError(emailInput, emailMsg);
+            }
+    }
 });
