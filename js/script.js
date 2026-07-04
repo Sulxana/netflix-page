@@ -21,5 +21,52 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 clearError(emailInput, emailMsg);
             }
+            if (!passwordValue || passwordValue.length < 4 || passwordValue.length > 60) {
+                showError(passwordInput, passMsg, "Your password must contain between 4 and 60 characters.");
+                isValid = false;
+            } else {
+                clearError(passwordInput, passMsg);
+            }
+            if (isValid) {
+                window.location.href = 'who-is-watching.html';
+            }
+        });
+    }
+    function showError(inputElement, errorElement, message) {
+        inputElement.classList.add('error');
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+    }
+    function clearError(inputElement, errorElement) {
+        inputElement.classList.remove('error');
+        errorElement.textContent = '';
+        errorElement.style.display = 'none';
+    }
+    // --- FAQ Accordion Logic ---
+    const faqButtons = document.querySelectorAll('.faq-trigger');
+    faqButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            // Close all other open items
+            document.querySelectorAll('.faq-box').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            faqItem.classList.toggle('active');
+        });
+    });
+    // --- Carousel Navigation ---
+    const sliderList = document.getElementById('sliderList');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    if (sliderList && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            sliderList.scrollBy({ left: -sliderList.clientWidth * 0.75, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+            sliderList.scrollBy({ left: sliderList.clientWidth * 0.7, behavior: 'smooth' });
+        });
     }
 });
