@@ -1,0 +1,54 @@
+.create-hint {
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.done-box {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.done-icon {
+    margin: 0 auto 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    animation: popIn 0.4s ease;
+}
+
+.done-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.done-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.done-msg {
+    color: var(--color-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.done-msg strong {
+    color: var(--color-light);
+}
+
+.done-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+@keyframes popIn {
+    0%   { transform: scale(0); opacity: 0; }
+    80%  { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}

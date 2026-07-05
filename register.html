@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your Netflix account. Watch anywhere. Cancel anytime.">
+    <title>Netflix - Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="login-bg">
+        <header class="top-nav">
+            <a href="index.html" aria-label="Netflix Home">
+                <img class="nav-logo" src="assets/logo.svg" alt="">
+            </a>
+        </header>
+        <main>
+            <div class="auth-box">
+                <!-- Step 1: Email entry -->
+                <div id="step1">
+                    <h1 class="auth-title">Create your account</h1>
+                    <p class="create-hint">Enter your email to get started.</p>
+                    <form id="createForm" class="form" novalidate>
+                        <div class="input-wrap">
+                            <input type="email" id="newEmail" class="input-field" placeholder=" " required autocomplete="email">
+                            <label for="newEmail" class="input-label">Email address</label>
+                            <span id="newEmailMsg" class="error-text"></span>
+                        </div>
+                        <button type="submit" class="btn btn-red form-submit">Send Verification Email</button>
+                    </form>
+                    <p class="auth-switch">
+                        Already have an account? <a href="signin.html">Sign in.</a>
+                    </p>
+                </div>
+
+                <!-- Step 2: Success message (hidden) -->
+                <div id="step2" class="done-box" style="display:none;">
+                    <div class="done-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="#46d369" stroke-width="2"/>
+                            <path d="M7.5 12.5L10.5 15.5L16.5 9.5" stroke="#46d369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="done-title">Verification email sent!</h2>
+                    <p class="done-msg">We've sent a verification link to <strong id="shownEmail"></strong>. Please check your inbox and follow the link to complete your registration.</p>
+                    <a href="signin.html" class="btn btn-red form-submit done-btn">Go to Sign In</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>
