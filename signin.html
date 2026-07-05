@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Sign In</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signin.css">
+</head>
+<body>
+    <div class="login-bg">
+        <header class="top-nav">
+            <a href="index.html" aria-label="Netflix Home">
+                <img class="nav-logo" src="assets/logo.svg" alt="">
+            </a>
+        </header>
+        <main>
+            <div class="auth-box">
+                <h1 class="auth-title">Sign In</h1>
+                <form id="signInForm" class="form" novalidate>
+                    <div class="input-wrap">
+                        <input type="email" id="userEmail" class="input-field" placeholder=" " autocomplete="email">
+                        <label for="userEmail" class="input-label">Email or phone number</label>
+                        <span id="emailMsg" class="error-text"></span>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="password" id="userPass" class="input-field" placeholder=" " autocomplete="current-password">
+                        <label for="userPass" class="input-label">Password</label>
+                        <span id="passMsg" class="error-text"></span>
+                    </div>
+                    <button type="submit" class="btn btn-red form-submit">Sign In</button>
+                    <div class="form-extras">
+                        <div>
+                            <input type="checkbox" id="rememberMe" checked>
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="#" style="color: #b3b3b3; text-decoration: none;">Need help?</a>
+                    </div>
+                </form>
+                <p class="auth-switch">
+                    New to Netflix? <a href="register.html">Sign up now.</a>
+                </p>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
