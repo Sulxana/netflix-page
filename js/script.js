@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sliderList.scrollBy({ left: -sliderList.clientWidth * 0.75, behavior: 'smooth' });
         });
         nextBtn.addEventListener('click', () => {
-            sliderList.scrollBy({ left: sliderList.clientWidth * 0.7, behavior: 'smooth' });
+            sliderList.scrollBy({ left: sliderList.clientWidth * 0.8, behavior: 'smooth' });
         });
     }
 });
