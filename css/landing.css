@@ -369,6 +369,7 @@
 
 .faq-box {
     background-color: #2d2d2d;
+    border-radius: 2px;
     transition: background-color 0.2s ease;
 }
 
